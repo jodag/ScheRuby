@@ -1,0 +1,13 @@
+(define (loop-ping n) 
+  (if (> n 0) (loop-pong (- n 1)) 'done))
+(define (loop-pong n) 
+  (if (> n 0) (loop-ping (- n 1)) 'done))
+
+(display "loop-ping 100")
+(time (loop-ping 100))
+(display "loop-ping 1000")
+(time (loop-ping 1000))
+(display "loop-ping 10000")
+(time (loop-ping 10000))
+(display "loop-ping 100000")
+(time (loop-ping 100000))
